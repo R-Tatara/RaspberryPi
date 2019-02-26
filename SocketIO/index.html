@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>websocket</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://192.168.11.9:8080');
+        //Callback when getting Pi_data from server
+        socket.on("Pi_data", function(data){
+            document.getElementById("Pi1").innerHTML = data.value;
+        });
+        socket.on("Pi_state", function(data){
+            document.getElementById("Pi2").innerHTML = data.value;
+        });
+    </script>
+</head>
+<body bgcolor = #B4DAED>
+    <h1>websocket client</h1>
+    <h4> Server time :</h4>
+    <div id="Pi1"></div>
+    <h4> RaspberryPi state :</h4>
+    <div id="Pi2"></div>
+</body>
+</html>
