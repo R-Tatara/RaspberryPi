@@ -8,3 +8,5 @@ acc           Pi
  5     SDO    21     SPI_MISO
  6     CS     24     SPI_CE0
  7
+
+Refference:Raspberry Pi 電子工作
